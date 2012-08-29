@@ -1,0 +1,578 @@
+/* Visual Editor Sub Tabs Content Inputs */
+div.sub-tabs-content div.input {
+	.rounded-corners(5px);
+	background: #0d0d0d; 
+	float: left;
+	margin: 0 15px 15px 0;
+	height: 25px;
+	padding: 5px;
+	border-bottom: 1px solid #222; 
+}
+
+	div.sub-tabs-content div.input label { 
+		color: #919191;
+		font-weight: bold;
+		line-height: 25px; 
+		margin: 0 5px; 
+		float: left; 
+	}
+	
+	/* Global Text Inputs */
+	div.sub-tabs-content div.input input.text { 
+		background: #252525; 
+		border: 1px solid #2e2e2e; 
+		.rounded-corners(3px);
+		padding: 4px 5px; 
+		margin: 0 0 0 2px;
+		color: #bbb;
+	}
+	
+		div.sub-tabs-content div.input input.text:focus {
+			background: #292929;
+			border-color: #333333;
+			color: #eee;
+		}
+	
+	div.sub-tabs-content div.input input.text[disabled] {
+		border: none;
+		background: none;
+	    font-size: 13px;
+	    font-weight: 600;
+	    margin: 0 -3px 0 0;
+	    padding: 4px 0 0 2px;
+		cursor: default;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+	
+		div.sub-tabs-content div.input input.text[disabled]:focus {
+			border: none;
+			background: none;
+			color: #bbb;
+		}
+	
+	div.sub-tabs-content div.input div.input-left { 
+		float: left; 
+		margin-right: 5px;
+	}
+
+	div.sub-tabs-content div.input div.input-right { 
+		float: left; 
+	}
+
+/* Integer Inputs */
+div.sub-tabs-content div.input-integer input { 
+	width: 30px; 
+}
+
+/* Suffixes/units */
+div.sub-tabs-content div.input span.suffix { 
+	color: #666;
+	margin: 0 5px 0 7px;
+	font-size: 11px; 
+}
+
+/* Textarea */
+div.sub-tabs-content div.input-textarea {
+	position: relative;
+}
+
+	div.sub-tabs-content div.input-textarea span.textarea-open {
+		background: url(%VISUALEDITOR%/images/textarea-open.png) no-repeat;
+		width: 12px;
+		height: 14px;
+		text-indent: -9999px;
+		display: block;
+		cursor: pointer;
+		opacity: .5;
+		margin: 5px 8px 0 2px;
+	}
+	
+		div.sub-tabs-content div.input-textarea span.textarea-open:hover {
+			opacity: .8;
+		}
+	
+	div.sub-tabs-content div.input-textarea div.textarea-container {
+		display: none;
+		position: fixed;
+		background: #0d0d0d;
+		width: auto;
+		height: auto;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		.rounded-corners(5px);
+		padding: 5px;
+		opacity: .85;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+		z-index: 11; /* Stay above panel resize handle */
+		margin: 0 0 10px;
+	}
+	
+		div.sub-tabs-content div.input-textarea div.textarea-container textarea {
+			.rounded-corners(5px);
+			width: 450px;
+			height: 200px;
+			resize: none;
+			.border-box;
+			padding: 7px;
+			opacity: .9;
+			font-family: courier, monospace;
+			line-height: 16px;
+		}
+
+/* WYSIWYG */
+div.sub-tabs-content div.input-wysiwyg {
+	position: relative;
+}
+
+	div.sub-tabs-content div.input-wysiwyg span.wysiwyg-open {
+		background: url(%VISUALEDITOR%/images/textarea-open.png) no-repeat;
+		width: 12px;
+		height: 14px;
+		text-indent: -9999px;
+		display: block;
+		cursor: pointer;
+		opacity: .5;
+		margin: 5px 8px 0 2px;
+	}
+	
+		div.sub-tabs-content div.input-wysiwyg span.wysiwyg-open:hover {
+			opacity: .8;
+		}
+	
+	div.sub-tabs-content div.input-wysiwyg div.wysiwyg-container {
+		display: none;
+		position: fixed;
+		background: #eee;
+		width: 500px;
+		height: 300px;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 5px;
+		padding: 5px;
+		opacity: .96;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+		z-index: 11; /* Stay above panel resize handle */
+		margin: 0 0 10px;
+	}
+
+		div.sub-tabs-content div.input-wysiwyg div.wysiwyg-container textarea {
+			height: 265px !important;
+		}
+		
+
+/* Checkbox */
+div.sub-tabs-content div.input-checkbox {
+	cursor: pointer;
+}
+
+	div.sub-tabs-content div.input-checkbox label { cursor: pointer; }
+	
+	div.sub-tabs-content div.input-checkbox img { 
+		margin: 6px 7px 0 6px; 
+		float: right; 
+		opacity: .15; 
+	}
+	
+	div.sub-tabs-content div.input-checkbox label.checkbox-checked { color: #e5e5e5; }
+	
+	div.sub-tabs-content div.input-checkbox img.checkbox-checked { opacity: .95; }
+	
+	div.sub-tabs-content div.input-checkbox input.checkbox { display: none; }
+
+/* Selects */
+div.sub-tabs-content div.input-select {
+	position: relative;		
+} 
+
+	div.sub-tabs-content div.input-select select {
+		background: #222 url(%VISUALEDITOR%/images/layout-selector-caret-open.png) no-repeat 92% 50%;
+	    border: 1px solid #2c2c2c;
+	    .rounded-corners(5px);
+	    color: #bbb;
+	    font-size: 11px;
+	    height: 20px;
+	    margin: 3px 0 0;
+	    padding: 0 30px 0 5px;
+		width: auto;
+		max-width: 200px;
+		cursor: pointer;
+	}
+		
+		div.sub-tabs-content div.input-select select:focus {
+			outline: 0;
+		}
+
+/* Multi-select */
+div.sub-tabs-content div.input-multi-select {
+	position: relative;
+}
+
+	div.sub-tabs-content div.input-multi-select span.multi-select-open {
+		background: url(%VISUALEDITOR%/images/textarea-open.png) no-repeat;
+		width: 12px;
+		height: 14px;
+		text-indent: -9999px;
+		display: block;
+		cursor: pointer;
+		opacity: .5;
+		margin: 5px 8px 0 2px;
+	}
+		
+		div.sub-tabs-content div.input-multi-select span.multi-select-open:hover {
+			opacity: .8;
+		}
+	
+	div.sub-tabs-content div.input-multi-select div.multi-select-container {
+		display: none;
+		position: fixed;
+		top: -180px;
+		left: 0;
+		background: #0d0d0d;
+		width: auto;
+		height: auto;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		.rounded-corners(5px);
+		padding: 5px;
+		opacity: .95;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+		z-index: 11; /* Stay above panel resize handle */
+		margin: 0 0 10px;
+	}
+	
+		div.sub-tabs-content div.input-multi-select div.multi-select-container select {
+			padding: 5px;
+			.border-box;
+			width: 170px;
+			height: 160px;
+			font-size: 12px;
+		}
+
+/* Colorpicker Buttons */		
+div.sub-tabs-content div.input-colorpicker div.colorpicker-box { 
+	display: block; 
+	width: 16px; 
+	height: 16px; 
+	border: 2px solid rgba(255, 255, 255, .15); 
+	.rounded-corners(3px);
+	float: right; 
+	cursor: pointer; 
+	margin: 1px 3px 0 5px; 
+	padding: 1px; 
+	text-indent: -9999px;
+}
+
+	div.sub-tabs-content div.input-colorpicker div.colorpicker-box div.colorpicker-color { 
+		display: block; 
+		width: 16px; 
+		height: 16px; 
+		background-color: #fff;
+	}
+	
+	div.sub-tabs-content div.input-colorpicker div.colorpicker-box div.colorpicker-color-transparent {
+		background: url(%VISUALEDITOR%/images/transparent-bg.png) no-repeat !important;
+	}
+
+/* Slider */
+div.input-slider-bar {
+	.rounded-corners(5px);
+	width: 200px;
+	height: 10px;
+	border: 1px solid #2E2E2E;
+	display: block;
+	float: left;
+	margin: 6px 7px 0 8px;
+	position: relative; 
+}
+
+	div.input-slider-bar div.ui-slider-range { 
+		background: #1c1c1c; 
+		height: 10px; 
+		.rounded-corners(4px);
+	}
+	
+	div.input-slider-bar a.ui-slider-handle { 
+		background: #343434;
+		.rounded-corners(8px);
+	    display: block;
+	    height: 16px;
+		width: 16px;
+	    margin: -13px 0 0 -8px;
+	    position: absolute; 
+	}
+	
+	div.input-slider-bar a.ui-slider-handle.ui-state-active { background: #2b2b2b; }
+
+div.input-slider-bar-text { 
+	font-size: 11px; 
+	float: left; 
+	margin: 6px 10px 0 5px; 
+}
+	
+	div.input-slider-bar-text span { 
+		float: left;
+		margin: 0;
+	}
+	
+	div.input-slider-bar-text span.slider-value { color: #666; }
+	
+	div.input-slider-bar-text span.slider-unit { color: #5a5a5a; }
+
+/* Multi-image Input */
+div.input-multi-image {
+	position: relative;
+}
+
+	div.input-multi-image span.multi-image-container-open {
+		background: url(%VISUALEDITOR%/images/multi-image-container-open.png) no-repeat;
+		width: 14px;
+		height: 12px;
+		text-indent: -9999px;
+		display: block;
+		cursor: pointer;
+		opacity: .5;
+		margin: 6px 8px 0 2px;
+	}
+	
+		div.input-multi-image span.multi-image-container-open:hover {
+			opacity: .8;
+		}
+	
+	div.input-multi-image div.multi-image-container {
+		display: none;
+		position: fixed;
+		background: #0d0d0d;
+		width: 170px;
+		height: 210px;
+		border: 1px solid rgba(255, 255, 255, 0.15);		
+		.rounded-corners(5px);
+		padding: 0 5px;
+		opacity: .9;
+		box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+		z-index: 11; /* Stay above panel resize handle */
+		margin: 0 0 10px;
+		overflow-y: auto;
+	}
+	
+		div.input-multi-image div.multi-image-container ul {
+			height: auto;
+			margin: 5px 0 50px;
+			float: left;
+			width: 100%;
+		}
+			 
+			div.input-multi-image div.multi-image-container ul li {
+				float: left;
+				clear: left;
+				width: 100%;
+				padding: 5px 0;
+				border-bottom: 1px solid rgba(255, 255, 255, .1);
+				position: relative;
+				cursor: move;
+			}
+			
+				div.input-multi-image div.multi-image-container ul li span.src {
+					font-size: 11px;
+					line-height: 16px;
+					font-size: 11px;
+					line-height: 16px;
+					width: 132px;
+				}
+				
+				div.input-multi-image div.multi-image-container ul li span.delete-image {
+					top: 50%;
+					right: 3px;
+					position: absolute;
+					margin: -7px 0 0;
+				}
+			
+			div.input-multi-image div.multi-image-container ul li.add-image {
+				border-bottom: none;
+				cursor: normal;
+			}
+			
+				div.input-multi-image div.multi-image-container ul li.add-image span.button {
+					font-size: 11px;
+					line-height: 23px;
+					height: 22px;
+					width: 74px;
+					position: absolute;
+					left: 50%;
+					margin: 7px 0 0 -48px;
+				}
+
+/* Colorpicker */
+.colorpicker {
+	width: 356px;
+	height: 200px;
+	overflow: hidden;
+	position: absolute;
+	background: url(data:image/png;base64,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%3D%3D);
+	font-family: Arial, Helvetica, sans-serif;
+	display: none;
+	z-index: 11; /* Stay above panel resize handle */
+	top: -9999px;
+	left: -9999px;
+	margin-left: -3px;
+}
+.colorpicker_color {
+	width: 150px;
+	height: 150px;
+	left: 14px;
+	top: 13px;
+	position: absolute;
+	background: #f00;
+	overflow: hidden;
+	cursor: crosshair;
+}
+.colorpicker_color div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 150px;
+	background: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_overlay.png);
+}
+.colorpicker_color div div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 11px;
+	height: 11px;
+	overflow: hidden;
+	background: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_select.gif);
+	margin: -5px 0 0 -5px;
+}
+.colorpicker_hue {
+	position: absolute;
+	top: 13px;
+	left: 171px;
+	width: 35px;
+	height: 150px;
+	cursor: n-resize;
+}
+.colorpicker_hue div {
+	position: absolute;
+	width: 35px;
+	height: 9px;
+	overflow: hidden;
+	background: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_indic.gif) left top;
+	margin: -4px 0 0 0;
+	left: 0px;
+}
+.colorpicker_new_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 213px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker_current_color {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	left: 283px;
+	top: 13px;
+	background: #f00;
+}
+.colorpicker input {
+	background-color: transparent;
+	border: 1px solid transparent;
+	position: absolute;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #898989;
+	top: 4px;
+	right: 11px;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+	height: 11px;
+}
+.colorpicker_hex {
+	position: absolute;
+	width: 72px;
+	height: 22px;
+	background: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_hex.png) top;
+	left: 212px;
+	top: 142px;
+}
+.colorpicker_hex input {
+	right: 6px;
+}
+.colorpicker_field {
+	height: 22px;
+	width: 62px;
+	background-position: top;
+	position: absolute;
+}
+.colorpicker_field span {
+	position: absolute;
+	width: 12px;
+	height: 22px;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	cursor: n-resize;
+}
+.colorpicker_rgb_r {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_rgb_r.png);
+	top: 52px;
+	left: 212px;
+}
+.colorpicker_rgb_g {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_rgb_g.png);
+	top: 82px;
+	left: 212px;
+}
+.colorpicker_rgb_b {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_rgb_b.png);
+	top: 112px;
+	left: 212px;
+}
+.colorpicker_hsb_h {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_hsb_h.png);
+	top: 52px;
+	left: 282px;
+}
+.colorpicker_hsb_s {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_hsb_s.png);
+	top: 82px;
+	left: 282px;
+}
+.colorpicker_hsb_b {
+	background-image: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_hsb_b.png);
+	top: 112px;
+	left: 282px;
+}
+.colorpicker_submit {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background: url(%HEADWAY_LIBRARY_URL%/media/js/colorpicker/images/colorpicker_submit.png) top;
+	left: 322px;
+	top: 142px;
+	overflow: hidden;
+}
+.colorpicker_focus {
+	background-position: center;
+}
+.colorpicker_hex.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_submit.colorpicker_focus {
+	background-position: bottom;
+}
+.colorpicker_slider {
+	background-position: bottom;
+}
+.colorpicker_transparent {
+	position: absolute;
+	clear: both;
+	background: none;
+	bottom: 11px;
+	left: 26px;
+}
+.colorpicker_transparent span.button {
+	height: 18px;
+	line-height: 18px;
+}

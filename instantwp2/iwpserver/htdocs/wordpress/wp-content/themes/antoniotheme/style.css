@@ -1,0 +1,29 @@
+/*
+THEME NAME:antoniotheme
+THEME URI:http://www.headwaythemes.com
+VERSION:0
+AUTHOR:Alberto Cabas Vidani
+AUTHOR URI:http://www.headwaythemes.com
+DESCRIPTION:Headway is a feature-packed theme with drag and drop layout editing, point and click design capabilities, powerful search engine optimization and much more.  For help, you can <a href="http://support.headwaythemes.com" target="_blank">access our support</a> or go to the <a href="http://codex.headwaythemes.com/" target="_blank">Headway codex</a>.
+TEMPLATE:headway
+*/
+
+#infoprogetto li{
+margin-bottom:10px
+}
+#materialslist{padding-left:10px;}
+h2 {
+padding:10px 0;
+font-size:140%;
+}
+
+.block-type-content .progetto, .block-type-content .progetto {
+border-style: solid;
+border-top-width: 0px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-right-width: 0px;
+border-color: #EFEFEF;
+padding-bottom: 30px;
+padding-left: 20px;
+}

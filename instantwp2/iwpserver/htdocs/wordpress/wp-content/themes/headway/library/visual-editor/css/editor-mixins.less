@@ -1,0 +1,46 @@
+.rounded-corners(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+
+.linear-gradient(@start, @end) {
+	background: (@start + @end) / 2;
+	background: -moz-linear-gradient(top, @start 0%, @end 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start), color-stop(100%, @end));
+	background: -webkit-linear-gradient(top, @start 0%, @end 100%); /* Chrome 10+, Safari 5.1+ */
+	background: -o-linear-gradient(top, @start 0%, @end 100%); /* Opera */
+	background: -ms-linear-gradient(top, @start 0%, @end 100%); /* IE10+ */
+	background: linear-gradient(top, @start 0%, @end 100%); /* W3C */ 
+}
+
+/* Highlighting */
+	.no-highlight() {
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	.allow-highlight() {
+		-webkit-user-select: text !important;
+		user-select: text !important;
+	}
+
+/* Box Sizing */
+	.border-box() {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+/* Anti-aliasing */
+	.antialias() {
+		-webkit-font-smoothing: antialiased;
+	}
+
+/* Transition */
+	.transition(@transition) {
+		-webkit-transition: e(@transition);
+		-moz-transition: e(@transition);
+		transition: e(@transition);
+	}

@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>phpMySQLAutoBackup - Readme</title>
+<link rel="stylesheet" type="text/css" href="pmab.css">
+</head>
+
+<body TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0">
+<div class="cssbox" style="width:820px;">
+<div class="cssbox_head">
+<p>
+<table border="0">
+<form action="http://www.dwalker.co.uk/forum/search.php" method="post" id="search">
+  <tr>
+    <td width="265" rowspan="2" >
+	<div id="logo-bk">
+	  <div align="center"><a href="http://www.dwalker.co.uk/phpmysqlautobackup/"><img
+    src="logo.gif"
+    alt="phpMySQLAutoBackup - automate the backup of your MySQL databases and email a copy to yourself" width="165" height="75"
+    border="0"></a> </div>
+	</div>	</td>
+        <td>
+<div style="padding-left:80px;margin-top:7px;"><b><br />
+  <em>php</em>MySQL<em>AutoBackup</em></b><br />
+<i>is FREE to use - its released under <a href="http://www.gnu.org/licenses/licenses.html#GPL">GPL License</a></i></div>
+	
+  <tr>
+    <td>	
+	<div id="searchbox">
+      <input name="keywords" id="keywords" type="text" maxlength="90"
+      title="Search for keywords" class="inputbox search" value="Search&#133;"
+      onclick="if(this.value=='Search&#133;')this.value='';"
+      onblur="if(this.value=='')this.value='Search&#133;';" / size="10" />
+      <input name="submit" type="submit" class="button2"
+      value="Search forum" />
+    </form></div>
+    </td>
+  </tr>
+</form>
+</table>
+</p>
+</div><div class="cssbox_body"></div> 
+</div>
+<div align="center"><center>
+    <p>Please consider making a <a name="donation">donation</a>, even a
+        single Dollar (or a Pound) would be great!</p>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2125295">
+<input type="image" src="https://www.paypal.com/en_GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="">
+<img alt="" border="0" src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+This ain't a big organisation - its just me.
+</form>
+</center></div>
+
+<p align="center"><a href="http://www.dwalker.co.uk/phpmysqlautobackup/"><b><em>php</em>MySQL<em>AutoBackup</em></b></a><small><br>
+the simple way to <strong>backup MySQL databases</strong>.  
+Automates the backup of MySQL databases.  <br>
+The PHP scripts export your database (data and structures), 
+compresses it into gzip format and emails it to you. </small> </p>
+<p align="center"><strong><font color="#FF9933">Note will now only run once per hour by default; when testing please see &quot;debugging&quot; section<br />
+in the run.php file to ensure the backup will run more than just once per hour for testing purposes.</font></strong></p>
+<p align="left"><big><strong>To upgrade an existing installation:</strong><big> </big></big></p>
+
+<ol>
+  <li>BACKUP your original files.&nbsp;</li>
+  <li>Follow the install details below (note: you can use your original run.php file, but need
+    to add the new variables detailed below to benefit from the new features).<br />
+    You can use the details within your existing <strong>/phpMySQLAutoBackup/run.php</strong> file to complete section 2 below.<br />
+  </li>
+</ol>
+
+<hr width="85%" color="#808080" align="center">
+
+<p align="left"><big><strong>To install:</strong> </big></p>
+
+<ol>
+  <li>Unzip the files and upload to your server.<blockquote>
+      <p>You should upload the files and folders retaining the <strong>original names</strong>&nbsp;</p>
+    </blockquote>
+  </li>
+  <li>To configure your installation, add your details to the following variables within file
+    /phpMySQLAutoBackup/<strong>run.php:</strong><blockquote>
+      <blockquote>
+        <ol type="a">
+          <li><strong>$db_server</strong><br>
+          &quot;localhost&quot; is normally fine - if not then please contract your web host </li>
+          <li><strong>$db</strong><br>
+            set to your MySQL database name<br>
+          </li>
+          <li><strong>$mysql_username</strong><br>
+            set to your MySQL username</li>
+          <li><strong>$mysql_password</strong><br>
+            set to your MySQL password</li>
+          <li><strong>$to_emailaddress<br>
+          </strong>set to your email address to send backup files to (leave blank to not send emails) </li>
+          <li><strong>$from_emailaddress<br>
+          </strong>set to a different email address than above - else some spam detectors will bin the email </li>
+          <li><strong>$save_backup_zip_file_to_server<br>
+            </strong>If you set the variable <strong>$save_backup_zip_file_to_server</strong> to 1
+            then the backup files will be saved in the folder: /phpmysqlautobackup/backups/ <br>
+            &nbsp;&nbsp;&nbsp; <font color="#FF0000">(ensure you chmod [777] the backups folder for write access to allow for file
+            creation)</font></li>
+          <li><strong>$time_internal</strong> - interval between backups - stops malicious attempts at bringing down your server by making multiple requests to run the backup. By default this is set to one hour (3600 seconds), will only allow the backup to run once each hour. You could reduce to 30 seconds when testing so you do not have to wait an hour! Do remember to put this backup to at least 3600 when testing is completed. </li>
+          <li><strong>$table_select </strong>- leave commented out if you need to backup the whole
+            database<strong>.<br>
+            </strong>If you uncomment the variable <strong>$table_select</strong> then only the
+            specified named tables will be selected for backup.&nbsp; The table names must be correct
+            else the backup will not select any tables.
+            <blockquote>
+              <p><strong>The correct format is:</strong><br>
+              $table_select[0]=&quot;MyFirstTableName&quot;;<br>
+              $table_select[1]=&quot;MySecondTableName&quot;;<br>
+              $table_select[2]=&quot;MyThirdTableName&quot;;<br>
+              $table_select[x]=&quot;MylastTableName&quot;;<br>
+              <br>
+              You can add any number of table names.<br>
+              <br>
+              <font color="#FF0000">If you specify distinct tables names, as above, then ONLY those
+              tables will be included in your backup.<br>
+              </font><br>
+              For a list of table names to backup for popular applications including phpBB and phpAMA
+              see:<br>
+              <a href="http://www.dwalker.co.uk/forum/viewtopic.php?t=491">http://www.dwalker.co.uk/forum/viewtopic.php?t=491</a>              </p>
+            </blockquote>
+          </li>
+          <li><strong>$table_exclude </strong>- leave commented out if you need to backup the whole
+            database<strong>.<br />
+              </strong>If you uncomment the variable <strong>$table_exclude</strong> then the
+            specified named tables will be excluded from the backup.
+              <blockquote>
+                <p><strong>The correct format is:</strong><br />
+                  $table_exclude[0]=&quot;FirstTableName&quot;;<br />
+                  $table_exclude[1]=&quot;SecondTableName&quot;;<br />
+                  $table_exclude[2]=&quot;ThirdTableName&quot;;<br />
+                  $table_exclude[x]=&quot;lastTableName&quot;;<br />
+                  <br />
+                  You can add any number of table names.<br />
+                  <br />
+                  <font color="#FF0000">Should not be used in conjunction with $table_select.<br />
+                  </font></p>
+            </blockquote>
+          </li>
+          <li><strong>$limit_from</strong><strong><br>
+            </strong>record number to start from, use this if you have a large table to backup.&nbsp;
+            Should be used with a single table setting like:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          $table_select[0]=&quot;MyFirstTableName&quot;;</li>
+          <li><strong>$limit_to</strong><br>
+            total rows to export <br>
+            <br>
+            The two variables above are used in the SQL query:<br>
+            &nbsp;&nbsp; <em>SELECT * FROM tablename LIMIT <strong>$limit_from , $limit_to</strong><br>
+            </em>These variables have been added to allow for the backup of just a section of a very
+          large table with millions of records.<br />
+          </li>
+          <li><strong>$newline</strong><br />
+            fix for&nbsp;email attachment issue (backup file included within email body). If your backup emails arrive in your mailbox with no attachment but loads of strange characters within the body of the email try setting  $newline to: &quot;\n&quot; <br />
+            <br />
+          </li>
+          <li><strong>FTP</strong> - push the backup file to a remote server. PHP CURL is required and ensure the local and remote backups folders are writeable.<br />
+            <br />
+            <blockquote>
+              <p><strong>The correct format is:</strong><br />
+                $ftp_username=&quot;your-ftp-username&quot;;<br />
+                $ftp_password=&quot;yoursecure-pass&quot;; <br />
+                $ftp_server=&quot;ftp.your--domain.com&quot;;<br />
+                $ftp_path=&quot;/public_html/secure-folder/&quot;; 
+                <br>
+                <br />
+                <em>The remote folder you are uploading to should be secure. Ensure your backups are not uploaded to a folder open for public access. </em></p>
+            </blockquote>
+          </li>
+          <li><strong>Debugging</strong> - uncomment the lines:&nbsp; <br />
+            error_reporting(E_ALL);<br />
+            $time_internal=2;<br>
+            This will then display any errors and allow the backup to run with only a 2 second wait limit.&nbsp; Do remember to comment out these lines once you
+                have the application working.</li>
+        </ol>
+        <p><strong>TIP:</strong>&nbsp; If you need to backup several different databases or tables at different
+        backup times you can copy the run.php file, and rename it appropriately.</p>
+      </blockquote>
+    </blockquote>
+  </li>
+  <li>To run the backup:<br>
+      <blockquote>
+        <blockquote>
+          <p>Enter in your address bar the url:</p>
+          <p><a href="http://www.[Your---domain].com/phpMySQLAutoBackup/run.php">http://www.[Your--domain].com/phpmysqlautobackup/run.php</a><br>
+            &nbsp; (runs silently [no output], unless there are errors, OHhh no.)</p>
+        </blockquote>
+      </blockquote>
+        <blockquote>
+          <p align="left"><strong>If you have entered the above details correctly this will export
+            your database, compress it into gzip format and email it to you.</strong><br>
+            <br>
+          When run correctly for the first time it will create a new table within your database called: phpmysqlautobackup, which contains a single record to monitor the last time it was run (used to stop abuse). </p>
+          <p align="left">To schedule it to run hourly/daily/monthly add the above url to a cron job
+            or use the <big><font face="Garamond">excellent <a href="http://www.phpjobscheduler.co.uk/">phpJobScheduler</a></font></big></p>
+    </blockquote>
+  </li>
+</ol>
+
+<p><strong>Common errors or issues: </strong></p>
+<blockquote>
+  <p>If you experience problems then the most common error is the script timing-out; usually error messages are:</p>
+  <blockquote>
+    <p><font color="red">Fatal error:  Maximum execution time of 50 seconds exceeded in</font>, or<br>
+    <font color="red">Fatal error: allowed memory size of bytes exhausted (tried to allocate bytes)</font>, or  <br>
+      <font color="red">Internal Server Error, this is an error with your script</font>, or other similar message </p>
+  </blockquote>
+  <p>Then you need to either:</p>
+  <ul>
+    <li>Specify specific table names to backup to reduce the time taken to create the backup, see 2.i. above, or</li>
+    <li>  Set the upper and lower export limits see 2.K. and 2.L. above.<br>
+      <br>
+      <ul>
+        <li> If you make these settings:
+          <ul>
+            <li> $limit_to=1000; //total rows to export </li>
+            <li> $limit_from=0; //record number to start from <br>
+              <br>
+              This will backup all records from the first row and upto 1000 rows. <br>
+              <br>
+            </li>
+          </ul>
+        </li>
+        <li>If you make these settings:
+                <ul>
+                  <li> $limit_to=1000; //total rows to export </li>
+                  <li> $limit_from=1001; //record number to start from      <br>  
+                    <br>
+This will backup all records from row 1001 and upto 1000 rows.       <br>
+<br>
+<br>
+If you copy the run.php file, and rename it appropriately then you can run the several backups of the data starting at different rows.<br>
+<br>
+Confused? Got a question? Try searching the forum:<br> 
+<a href="http://www.dwalker.co.uk/forum/search.php">http://www.dwalker.co.uk/forum/search.php</a> <br>  
+                    <br>
+                  </li>
+                </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+<p>I do hope you find it useful, and if you use it let me know&nbsp; ;-)</p>
+<p>And if you are feeling generous then you might even consider <a href="#donation">giving
+a tiny donation</a>, any small amount helps keep the wheels turning.</p>
+<p>&nbsp;</p>
+
+<div align="center">
+  <div style="background-color:#CCCCCC;"> <strong>My other applications:</strong> <br />
+    <br />
+    <table width="768" border="0">
+      <tr>
+        <th width="376" scope="col">
+		Create your own members area: 	
+    <div id="logo-bk">
+	  <div align="center"><a href="http://www.dwalker.co.uk/phpautomembersarea/"><img src="http://www.dwalker.co.uk/phpautomembersarea/pamalogo.gif" alt="phpAMA - create a members area using PHP MySQL, protect your members only or adult content" border="0"></a></div>
+	</div>		
+	<a href="http://www.dwalker.co.uk/phpautomembersarea/" >phpAutoMembersArea</a></th>
+        <th width="382" scope="col">Run cron jobs with ease schedule PHP scripts to <br />
+          run: 1-59 minutes, hourly, daily or weekly, <br />
+          and log the output
+		         <div id="logo-bk">
+	  <div align="center"><a href="http://www.phpjobscheduler.co.uk/"><img src="http://www.phpjobscheduler.co.uk/pjslogo.gif" alt="phpJobScheduler - scheduling PHP scripts to run at set intervals your replacement for cron jobs.&nbsp; " border="0" height="75" width="165"></a> </div>
+	</div>	
+		<a href="http://www.phpjobscheduler.co.uk">phpJobScheduler</a>
+        </p></th>
+      </tr>
+  </table>
+</div></div>
+</div>
+</body>
+</html>

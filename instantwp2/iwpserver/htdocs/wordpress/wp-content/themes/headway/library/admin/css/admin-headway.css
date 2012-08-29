@@ -1,0 +1,431 @@
+/* Important Stuff */
+	#icon-headway {
+		background: url(../images/headway-32.png) no-repeat;
+		width: 32px;
+		height: 32px;
+		margin-right: 12px;
+	}
+
+
+/* Regular Elements */
+	abbr, acronym {
+		background: #eee;
+		cursor: help;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	div.hr {
+		background: transparent;
+	    border-top: 1px solid #eaeaea;
+	    clear: both;
+	    height: 1px;
+	    margin: 24px 0;
+	    overflow: hidden;
+		display: block;
+		width: 100%;
+	}
+/* End Regular Elements */
+
+
+/* Messages */
+	/* Reset */
+		div.reset-alert {
+			width: 700px;
+		}
+		
+			div.reset-alert input.alert-big-button {
+				color: #832525;
+			}
+	/* End Reset */
+	
+	/* Maintenance */
+		div.maintenance-alert {
+			width: 700px;
+		}
+	/* End Maintenance */
+	
+	/* Alert Buttons */
+		input.alert-big-button {		
+			background: -moz-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f2f2f2));
+			background: -webkit-linear-gradient(top, #fff 0%,#f2f2f2 100%);
+			font-size: 15px !important;
+			width: 300px;
+			height: 34px;
+			text-shadow: 1px 1px 0 white;
+		
+			position: relative;
+			margin: 15px 0 20px -158px;
+			left: 50%;
+		}
+	
+			input.alert-big-button:active {
+				background: -moz-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#fff));
+				background: -webkit-linear-gradient(top, #f2f2f2 0%,#fff 100%);
+			}
+	/* End Alert Buttons */
+/* End Messages */
+
+
+/* Wrapper */
+	div.headway-small-wrap { 
+		max-width: 800px; 
+	}
+/* End Wrapper */
+
+
+/* Titles */
+	h3.title {
+		margin: 30px 0 15px;
+	}
+
+		h3.title code { font-size: 1em; }
+		
+	h3.title-hr {
+		border-top: 1px solid #eee;
+		padding-top: 30px;
+	}
+/* End Titles */
+
+
+/* Tabs */
+	h2.big-tabs-tabs {
+		opacity: 0;
+	}
+	
+	h2.big-tabs-tabs a.nav-tab-active { color: #D54E21; }
+	h2.big-tabs-tabs a:hover:not(.nav-tab-active) { color: #464646; }
+
+	h2.big-tabs-tabs a.nav-tab-inactive { 
+		opacity: .4;
+		cursor: help;
+		color: #aaa !important; 
+	}
+		
+	div.big-tab {
+		max-width: 1100px;
+		display: none;
+	}
+	
+	div.big-tab-fading {
+		position: absolute;
+		z-index: 1;
+	}
+	
+	div.big-tab-visible {  }
+/* End Tabs */
+
+
+/* Inputs */
+	table.form-table tr {
+		border-bottom: 1px solid #f3f3f3;
+	}
+	
+		table.form-table tr.no-bottom-border {
+			border-bottom: none;
+		}
+	
+	table.form-table tr th, table.form-table tr td {
+		padding: 15px 10px; 
+	}
+
+	table.form-table label { 
+		user-select: none;
+		-webkit-user-select: none;
+	}
+	
+	table.form-table textarea {
+		resize: none;
+	}
+	
+	table.form-table select {
+		width: 150px;
+	}
+
+	label span.label-tooltip {
+		width: 14px;
+		height: 13px;
+		background: url(../images/help-grey.png);
+		display: inline-block;
+		text-indent: -9999px;
+		margin: 0 0 -1px 8px;
+		cursor: help;
+		opacity: .5;
+	}
+
+	label span.label-tooltip:hover { opacity: .9; }
+
+	label.radio-label { 
+		margin-right: 15px;
+	}
+
+	div.hr-submit {
+		margin: 45px 0 20px;
+	}
+
+	p.submit { 
+		padding-top: 0; 
+	}
+	
+	input.large-text {
+		width: 350px;
+	}
+	
+	input.button-primary {
+		background: -moz-linear-gradient(top, #298cba 0%, #1d6385 100%) !important;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #298cba), color-stop(100%, #1d6385)) !important;
+		background: -webkit-linear-gradient(top, #298cba 0%, #1d6385 100%) !important;
+	}
+	
+		input.button-primary:active {
+			background: -moz-linear-gradient(top, #1d6385 0%, #298cba 100%) !important;
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1d6385), color-stop(100%, #298cba)) !important;
+			background: -webkit-linear-gradient(top, #1d6385 0%, #298cba 100%) !important;
+		}
+	
+	input.headway-save {
+		width: 220px;
+		height: 28px;
+	}
+/* End Inputs */
+
+
+/* Input Descriptions and Tooltips */
+	p.description { 
+		clear: both;
+		margin: 0; 
+	}
+/* End Input Descripts and Tooltips */
+
+
+/* Getting Started Page */
+	h3.headway-sub-title {
+		color: #777;
+		font-size: 16px;
+		line-height: 25px;
+		font-weight: normal;
+	}
+
+	div#headway-getting-started-ve-link-container { 
+		margin: 15px 0 15px -250px;
+		position: relative;
+		left: 50%;
+		float: left;
+		clear: both;
+	}
+
+	div#headway-getting-started-ve-link-container p { margin-left: 10px; }
+
+	div#headway-getting-started-license-notice {
+		font-size: 13px;
+	}
+	
+	input.headway-big-button {
+		background: -moz-linear-gradient(top, #fff 0%, #f2f2f2 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f2f2f2));
+		background: -webkit-linear-gradient(top, #fff 0%,#f2f2f2 100%);
+		font-size: 15px !important;
+		width: 450px;
+		height: 40px;
+		text-shadow: 1px 1px 0 #fff;
+	}
+	
+		input.headway-big-button:active {
+			background: -moz-linear-gradient(top, #f2f2f2 0%, #fff 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#fff));
+			background: -webkit-linear-gradient(top, #f2f2f2 0%,#fff 100%);
+		}
+/* End Getting Started Page */
+
+
+/* Options Page */
+	/* SEO Tab */
+		h3#seo-templates-title {
+			margin: 30px 0 -25px 125px;
+			font-size: 1.3em;
+		}
+	
+		div#seo-templates-header {
+			width: auto;
+			float: left;
+			border: 1px solid #e5e5e5;
+			padding: 5px;
+			border-bottom: none;
+			border-radius: 8px 8px 0 0;
+			background: #fff;
+			margin: 0 0 -1px 800px;
+			position: relative;
+			background: #fafafa;
+		}
+		
+			div#seo-templates-header span {
+				top: 9px;
+				left: -140px;
+				position: absolute;
+				width: 130px;
+				text-align: right;
+				color: #999;
+			}
+		
+			div#seo-templates-header select { 
+				width: 150px; 
+			}
+		
+		div#seo-templates-inputs {
+			width: 850px;
+			padding: 15px;
+			border: 1px solid #e5e5e5;
+			border-radius: 8px;
+			clear: both;
+			margin: 0 0 0 110px;
+			background: #fafafa;
+			box-shadow: 1px 1px 0 #ddd;
+		}
+		
+			div#seo-templates-inputs th { 
+				width: 130px;
+			}
+			
+			div#seo-templates-inputs input.large-text, div#seo-templates-inputs textarea {
+				width: 100%;
+			}
+			
+		h3#seo-templates-advanced-options-title span {
+			cursor: pointer;
+			margin: 0 0 0 5px;
+			font-size: 11px;
+			font-weight: bold;
+			color: #21759B;
+			padding: 5px 10px;
+			background: #eee;
+			text-shadow: 1px 1px 0 #fff;
+			border-radius: 3px;
+			box-shadow: 1px 1px 0 #ddd;
+		}
+		
+			h3#seo-templates-advanced-options-title span:hover {
+				color: #D54E21;
+			}
+			
+		div#seo-templates-advanced-options {
+			display: none;
+		}
+		
+		p#seo-description {
+			margin: 25px 0 -5px 0;
+		}
+	/* End SEO Tab */
+
+	/* License Validation */
+		table.license-key-input-table {
+			border: 1px solid #dadada;
+			border-radius: 5px;
+			background: #f3f3f3;
+			display: block;
+
+			margin: 30px 0 -10px;
+		}
+
+		span.license-key-validation {
+			margin: 0 0 0 6px;
+			padding-bottom: 1px;
+		}
+
+		span.license-key-validation.red {
+			border-bottom: 1px dotted #900;
+		}
+	/* End License Validation */
+/* End Options Page */
+
+
+/* Tools */
+	/* System Info */
+	textarea#system-info-textarea {
+		font-family: 'courier new', monospace;
+		margin: 10px 0 0 0;
+		width: 900px;
+		height: 400px;
+	}
+
+/* End Tools */
+
+
+/* Updates */
+	.headway-update-backup-reminder {
+		width: 650px !important;
+		padding: 5px 20px !important;
+	}
+/* End Updates */
+
+
+/* Colored Text */
+	span.red {
+		color: #900;
+	}
+
+	span.green {
+		color: #090;
+	}
+/* End Colored Text */
+
+
+/* Obligatory stupid jQuery stuff */
+	.ui-helper-hidden {
+		display: none;
+	}
+
+	.ui-helper-hidden-accessible {
+		left: -9999px;
+		position: absolute;
+	}
+
+	.ui-helper-reset {
+		border: 0;
+		font-size: 100%;
+		line-height: 1.3;
+		list-style: none;
+		margin: 0;
+		outline: 0;
+		padding: 0;
+		text-decoration: none;
+	}
+
+	.ui-helper-clearfix:after {
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+
+	.ui-helper-clearfix {
+		display: inline-block;
+	}
+
+	* html .ui-helper-clearfix {
+		height: 1%;
+	}
+
+	.ui-helper-clearfix {
+		display: block;
+	}
+
+	.ui-helper-zfix {
+		filter: alpha(opacity=0);
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.ui-widget-overlay {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
