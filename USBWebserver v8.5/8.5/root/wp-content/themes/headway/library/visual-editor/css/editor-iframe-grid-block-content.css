@@ -1,0 +1,121 @@
+.block-content-fade {
+	opacity: .6;
+	-moz-transition: opacity 0.125s linear; 
+	-webkit-transition: opacity 0.125s linear; 
+	transition: opacity 0.125s linear;
+}
+
+	.block:hover .block-content-fade {
+		opacity: .9;
+	}
+
+/* All Hyperlink */
+.block-content-fade a {
+	color: #222;
+}
+
+/* Blocks */
+	/* Header */
+	.block-type-header span.banner a {
+		font-size: 32px;
+		text-decoration: none;
+	}
+	
+	.block-type-header .tagline {
+		font-size: 14px;
+		color: #666;
+	}
+		
+	
+	/* Navigation */	
+	.block-type-navigation .nav-horizontal, .block-type-navigation ul {
+		background: #ccc;
+		height: 100%;
+	}
+
+	.block-type-navigation ul li {
+		height: 100%;
+	}
+	
+	.block-type-navigation ul li a { 
+		text-decoration: none;
+		background: #ccc;
+		display: table;
+		height: 100% !important;
+		line-height: normal !important;
+	}
+	
+		.block-type-navigation .nav-vertical ul li a {
+			height: auto;
+			line-height: 40px !important;
+		}
+	
+		.block-type-navigation .nav-horizontal ul li a {
+			border-right: 1px solid #888;
+		}
+		
+		.block-type-navigation .nav-vertical ul li a {
+			width: 100%;
+			border-bottom: 1px solid #888;
+		}
+	
+		.block-type-navigation a span {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	
+		.block-type-navigation ul li.current_page_item a {
+			background: #aaa;
+		}
+		
+	.block-type-navigation .nav-search-active .nav-search {
+		height: 100% !important;
+	}
+
+
+	/* Breadcrumbs */
+	.block-type-breadcrumbs p.breadcrumbs {
+	}
+
+	/* Widget Area */		
+		.block-type-widget-area li.widget { 
+			padding: 5px 10px;
+			list-style: none;
+			line-height: 150%;
+		}
+
+			.block-type-widget-area li.widget ul {
+				padding: 0 0 0 25px;
+				margin: 5px 0;
+				list-style: disc;
+			}
+
+		.block-type-widget-area li.widget span.widget-title { 
+			font-size: 16px;
+		}	
+
+	/* Content */
+		.block-type-content .entry-title, .block-type-content .archive-title {
+			font-size: 22px;
+		}
+				
+		.block-type-content .entry-meta, .block-type-content .entry-utility {
+			color: #777;
+		}
+		
+		/* Content Elements */
+			div.entry-content {
+				line-height: 170%;
+			}
+		
+			/* Headings */
+			div.entry-content h1, div.entry-content h2 {
+				font-size: 18px;
+			}
+			
+			div.entry-content h3, div.entry-content h4, div.entry-content h5, div.entry-content h6 {
+				font-size: 15px;
+			}
+		/* End Content Elements */
+			
+/* END BLOCKS */

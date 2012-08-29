@@ -1,0 +1,160 @@
+/* Tooltips */
+.ui-tooltip, .qtip{
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+
+	max-width: 400px;
+	min-width: 50px;
+	
+	font-size: 10.5px;
+	line-height: 12px;
+
+	z-index: 15000;
+	font-family: helvetica, sans-serif;
+}
+
+	.ui-tooltip-content{
+		position: relative;
+		padding: 5px 9px;
+		overflow: hidden;
+		
+		border-width: 1px;
+		border-style: solid;
+		
+		text-align: left;
+		word-wrap: break-word;
+		overflow: hidden;
+	}
+	
+		.ui-tooltip-content strong {
+			font-weight: bold;
+		}
+		
+		.ui-tooltip-content em {
+			font-style: italic;
+		}
+
+		.ui-tooltip-content ul {
+			margin: 5px 0;
+			padding: 0 5px 0 30px;
+			list-style: disc;
+		}
+
+	.ui-tooltip-titlebar{
+		position: relative;
+		min-height: 14px;
+		padding: 5px 35px 5px 10px;
+		overflow: hidden;
+		
+		border-width: 1px 1px 0;
+		border-style: solid;
+
+		font-weight: bold;
+	}
+
+	.ui-tooltip-titlebar + .ui-tooltip-content{ border-top-width: 0px !important; }
+
+		/*! Default close button class */
+		.ui-tooltip-titlebar .ui-state-default{
+			position: absolute;
+			right: 4px;
+			top: 50%;
+			margin-top: -9px;
+
+			cursor: pointer;
+			outline: medium none;
+
+			border-width: 1px;
+			border-style: solid;
+		}
+		
+		* html .ui-tooltip-titlebar .ui-state-default{ top: 16px; } /* IE fix */
+
+		.ui-tooltip-titlebar .ui-icon,
+		.ui-tooltip-icon .ui-icon{
+			display: block;
+			text-indent: -1000em;
+		}
+
+		.ui-tooltip-icon, .ui-tooltip-icon .ui-icon{
+			.rounded-corners(3px);
+		}
+
+			.ui-tooltip-icon .ui-icon{
+				width: 18px;
+				height: 14px;
+
+				text-align: center;
+				text-indent: 0;
+				font: normal bold 10px/13px Tahoma,sans-serif;
+
+				color: inherit;
+				background: transparent none no-repeat -100em -100em;
+			}
+
+
+/* Tips plugin */
+.ui-tooltip .ui-tooltip-tip{
+	margin: 0 auto;
+	overflow: hidden;
+
+	background: transparent;
+	border: 0px dashed transparent !important;
+	z-index: 10;
+}
+
+	.ui-tooltip .ui-tooltip-tip,
+	.ui-tooltip .ui-tooltip-tip *{
+		position: absolute;
+		
+		line-height: 0.1px !important;
+		font-size: 0.1px !important;
+		color: #123456;
+
+		background: transparent;
+		border: 0px dashed transparent;
+	}
+	
+	.ui-tooltip .ui-tooltip-tip canvas{ top: 0; left: 0; }
+
+
+/* Headway Tooltips */
+div.ui-tooltip-headway div.ui-tooltip-content {
+	background: #313131;
+	color: #ddd;
+	border: none;
+	.rounded-corners(4px);
+	padding: 6px 10px;
+	font-size: 12px;
+	line-height: 20px;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, .2);
+}
+
+
+/* Block Dimensions */
+div.ui-tooltip-block-dimensions {
+	opacity: .85 !important;
+}
+
+div.ui-tooltip-block-dimensions div.ui-tooltip-content, div.ui-tooltip-block-dimensions div.ui-tooltip-content * {
+	font-size: 11px;
+	line-height: 17px;
+}
+
+	div.ui-tooltip-block-dimensions div.ui-tooltip-content span.block-dimensions-separator {
+		font-size: 13px;
+		opacity: .8;
+	}
+	
+	div.ui-tooltip-block-dimensions div.ui-tooltip-content small {
+		font-size: 10px;
+	}
+	
+	div.ui-tooltip-block-dimensions span.block-fluid-height-message {
+		display: block;
+		text-align: center;
+		opacity: .7;
+	}

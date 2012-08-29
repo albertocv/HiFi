@@ -1,0 +1,137 @@
+********************************************************************************
+INSTALLER-LOG
+********************************************************************************
+START-PRECHECK:10:38:14
+----------------------------------
+ENVIROMENT:
+version: 0.3.1
+log level: 1
+php:5.3.9
+php sapi: apache2handler
+mysql:5.5.20
+server: Apache/2.2.21 (Win32) PHP/5.3.9
+document root: C:\Users\albertocv\Desktop\USBWebserver v8.5\8.5\root
+document root 755: 1
+secure build name: 503dd375a2f245077_20120829_instantwordpress
+----------------------------------
+SETTINGS:
+database connection => host:localhost | database:hifidate 
+old url:'http://127.0.0.1:4001/wordpress'
+new url:'http://localhost:8080'
+disable ssl: false
+zip manual: false
+zip archive installed: true
+----------------------------------
+DROP TABLES STATUS:
+results => No tables found to remove.
+END-PRECHECK:10:38:14
+
+********************************************************************************
+PACKAGE-EXTRACTION
+********************************************************************************
+START-EXTRACTION:10:38:14
+
+starting package extraction
+zip information:
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1622
+    [filename] => C:\Users\albertocv\Desktop\USBWebserver v8.5\8.5\root\503dd375a2f245077_20120829_instantwordpress_package.zip
+    [comment] => 
+)
+
+zip close response: 1
+package extracted complete
+
+END-EXTRACTION:10:38:24
+
+********************************************************************************
+SCRIPT FILES ROUTINE
+********************************************************************************
+START-FILES:10:38:24
+
+new url is: http://localhost:8080
+scrubbed old url(s) in installer-data.sql:
+- http://127.0.0.1:4001/wordpress
+
+finalized scripts:
+- see installer-data.sql for SQL processed.
+- see wp-config.php for updated changes. 
+
+END FILES:10:38:24
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+START-DB:10:38:24
+
+db create: true
+db clean: true
+db replace characters: false
+db mysqli charset: false
+db wait_timeout: 5000
+----------------------------------
+DATABASE RESULTS
+processed queries: 569 
+process time: 6.7297 sec.
+
+Table Record Counts
+wp_cfs_fields:0
+wp_cfs_values:0
+wp_commentmeta:0
+wp_comments:15
+wp_duplicator:0
+wp_links:7
+wp_options:198
+wp_postmeta:104
+wp_posts:73
+wp_term_relationships:92
+wp_term_taxonomy:17
+wp_terms:17
+wp_usermeta:29
+wp_users:2
+
+Transient cached cleanup completed.
+
+----------------------------------
+START SERIALIZATION:10:38:30
+
+serialization query (138):
+SELECT option_id, option_value FROM wp_options 
+
+serialization query (104):
+SELECT meta_id, meta_value FROM wp_postmeta 
+
+serialization query (29):
+SELECT umeta_id, meta_value FROM wp_usermeta 
+
+serialization replacements:
+updated 1 records
+
+END SERIALIZATION:10:38:30
+
+END DB-ROUTINES:10:38:30
+
+********************************************************************************
+START FINAL CLEANUP
+********************************************************************************
+START-CLEANUP:10:38:30
+
+HTACCESS CHANGES:
+created backup of original .htaccess to htaccess.orig and web.config to web.config.orig
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+updated .htaccess file as follows:
+ # BEGIN WordPress
+	<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+	</IfModule>
+# END WordPress
+END FINAL:10:38:30
+

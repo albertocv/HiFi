@@ -1,0 +1,93 @@
+08:31:49 ********************************************************* 
+08:31:49 PACKAGE-LOG:  
+08:31:49 ********************************************************* 
+08:31:49 duplicator: 0.3.1 
+08:31:49 wordpress: 3.3.2 
+08:31:49 php: 5.3.2 
+08:31:49 php sapi: apache2handler 
+08:31:49 server: Apache/2.2.15 (Win32) PHP/5.3.2 
+08:31:49 browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.14 Safari/537.4 
+08:31:49 package name: 20120829_instantwordpress 
+08:31:49 max_time: from=1000 to=1000 
+08:31:49 max_memory: from=256M to=512M 
+08:31:49 mysql wait_timeout: 1000 
+08:31:49 ********************************************************* 
+08:31:49 SQL SCRIPT 
+08:31:49 ********************************************************* 
+08:31:49 log:fun__create_dbscript=>started 
+08:31:49 log:fun__create_dbscript=>dbiconv enabled 
+08:31:49 log:fun__create_dbscript=>creating table: wp_cfs_fields 
+08:31:49 log:fun__create_dbscript=>rows found: 0 
+08:31:49 log:fun__create_dbscript=>table processed: wp_cfs_fields 
+08:31:49 log:fun__create_dbscript=>creating table: wp_cfs_values 
+08:31:49 log:fun__create_dbscript=>rows found: 0 
+08:31:49 log:fun__create_dbscript=>table processed: wp_cfs_values 
+08:31:49 log:fun__create_dbscript=>creating table: wp_commentmeta 
+08:31:49 log:fun__create_dbscript=>rows found: 0 
+08:31:49 log:fun__create_dbscript=>table processed: wp_commentmeta 
+08:31:49 log:fun__create_dbscript=>creating table: wp_comments 
+08:31:49 log:fun__create_dbscript=>rows found: 15 
+08:31:49 log:fun__create_dbscript=>table processed: wp_comments 
+08:31:49 log:fun__create_dbscript=>creating table: wp_duplicator 
+08:31:49 log:fun__create_dbscript=>rows found: 0 
+08:31:49 log:fun__create_dbscript=>table processed: wp_duplicator 
+08:31:49 log:fun__create_dbscript=>creating table: wp_links 
+08:31:49 log:fun__create_dbscript=>rows found: 13 
+08:31:49 log:fun__create_dbscript=>table processed: wp_links 
+08:31:49 log:fun__create_dbscript=>creating table: wp_options 
+08:31:49 log:fun__create_dbscript=>rows found: 5 
+08:31:49 log:fun__create_dbscript=>table processed: wp_options 
+08:31:49 log:fun__create_dbscript=>creating table: wp_postmeta 
+08:31:49 log:fun__create_dbscript=>rows found: 4 
+08:31:49 log:fun__create_dbscript=>table processed: wp_postmeta 
+08:31:49 log:fun__create_dbscript=>creating table: wp_posts 
+08:31:49 log:fun__create_dbscript=>rows found: 23 
+08:31:49 log:fun__create_dbscript=>table processed: wp_posts 
+08:31:49 log:fun__create_dbscript=>creating table: wp_term_relationships 
+08:31:49 log:fun__create_dbscript=>rows found: 3 
+08:31:49 log:fun__create_dbscript=>table processed: wp_term_relationships 
+08:31:49 log:fun__create_dbscript=>creating table: wp_term_taxonomy 
+08:31:49 log:fun__create_dbscript=>rows found: 6 
+08:31:49 log:fun__create_dbscript=>table processed: wp_term_taxonomy 
+08:31:49 log:fun__create_dbscript=>creating table: wp_terms 
+08:31:49 log:fun__create_dbscript=>rows found: 4 
+08:31:49 log:fun__create_dbscript=>table processed: wp_terms 
+08:31:49 log:fun__create_dbscript=>creating table: wp_usermeta 
+08:31:49 log:fun__create_dbscript=>rows found: 4 
+08:31:49 log:fun__create_dbscript=>table processed: wp_usermeta 
+08:31:49 log:fun__create_dbscript=>creating table: wp_users 
+08:31:49 log:fun__create_dbscript=>rows found: 10 
+08:31:49 log:fun__create_dbscript=>table processed: wp_users 
+08:31:49 log:fun__create_dbscript=>sql file written to D:/Syncs/Dropbox/Development/HiFi/instantwp2/iwpserver/htdocs/wordpress/wp-snapshots/503dd375a2f245077_20120829_instantwordpress_database.sql 
+08:31:49 log:fun__create_dbscript=>ended 
+08:31:49 ********************************************************* 
+08:31:49 ZIP ARCHIVE 
+08:31:49 ********************************************************* 
+08:31:49 log:class.zip=>started 
+08:31:49 log:class.zip=>archive file:   D:/Syncs/Dropbox/Development/HiFi/instantwp2/iwpserver/htdocs/wordpress/wp-snapshots/503dd375a2f245077_20120829_instantwordpress_package.zip 
+08:31:49 log:class.zip=>archive folder: D:/Syncs/Dropbox/Development/HiFi/instantwp2/iwpserver/htdocs/wordpress/ 
+08:31:49 log:class.zip=>skip extensions: 
+08:31:49 log:class.zip=>opened 
+08:31:50 log:class.zip=>archive info: ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1622
+    [filename] => D:\Syncs\Dropbox\Development\HiFi\instantwp2\iwpserver\htdocs\wordpress\wp-snapshots\503dd375a2f245077_20120829_instantwordpress_package.zip
+    [comment] => 
+)
+ 
+08:31:59 log:class.zip=>close returned: 1 (if null check your disk quota) 
+08:31:59 log:class.zip=>ended 
+08:31:59 log:act__create=>zip file size is: 7.83MB 
+08:31:59 log:act__create=>zip archive complete. 
+08:31:59 log:act__create=>recorded archieve id: 1 
+08:31:59 ********************************************************* 
+08:31:59 UPDATE INSTALLER FILE 
+08:31:59 ********************************************************* 
+08:31:59 log:fun__create_installerFile=>started 
+08:31:59 log:fun__create_installerFile=>installer.php updated at: D:/Syncs/Dropbox/Development/HiFi/instantwp2/iwpserver/htdocs/wordpress/wp-snapshots/503dd375a2f245077_20120829_instantwordpress_installer.php 
+08:31:59 log:fun__create_installerFile=>ended 
+08:31:59 ********************************************************* 
+08:31:59 DONE PROCESSING => 20120829_instantwordpress 
+08:31:59 ********************************************************* 
