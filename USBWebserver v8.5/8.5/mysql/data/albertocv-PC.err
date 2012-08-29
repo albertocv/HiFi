@@ -43,3 +43,79 @@ InnoDB: buffer...
 120829 10:35:39 [Note] Event Scheduler: Loaded 0 events
 120829 10:35:39 [Note] C:\Users\albertocv\Desktop\USBWebserver v8.5\8.5/mysql/bin/mysqld_usbwv8.exe: ready for connections.
 Version: '5.5.20'  socket: ''  port: 3307  MySQL Community Server (GPL)
+120829 13:55:58 [Note] Plugin 'FEDERATED' is disabled.
+120829 13:55:58 InnoDB: The InnoDB memory heap is disabled
+120829 13:55:58 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+120829 13:55:58 InnoDB: Compressed tables use zlib 1.2.3
+120829 13:55:58 InnoDB: Initializing buffer pool, size = 128.0M
+120829 13:55:58 InnoDB: Completed initialization of buffer pool
+120829 13:55:59 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120829 13:55:59  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120829 13:56:01  InnoDB: Waiting for the background threads to start
+120829 13:56:02 InnoDB: 1.1.8 started; log sequence number 1595675
+120829 13:56:02 [Note] Event Scheduler: Loaded 0 events
+120829 13:56:02 [Note] D:\Syncs\Dropbox\Development\HiFi\USBWebserver v8.5\8.5/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.5.20'  socket: ''  port: 3307  MySQL Community Server (GPL)
+120829 14:27:54 [Note] Plugin 'FEDERATED' is disabled.
+120829 14:27:54 InnoDB: The InnoDB memory heap is disabled
+120829 14:27:54 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+120829 14:27:54 InnoDB: Compressed tables use zlib 1.2.3
+120829 14:27:54 InnoDB: Initializing buffer pool, size = 128.0M
+120829 14:27:54 InnoDB: Completed initialization of buffer pool
+120829 14:27:54 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120829 14:27:54  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120829 14:27:55  InnoDB: Waiting for the background threads to start
+120829 14:27:56 InnoDB: 1.1.8 started; log sequence number 1595675
+120829 14:27:56 [Note] Event Scheduler: Loaded 0 events
+120829 14:27:56 [Note] D:\Syncs\Dropbox\Development\HiFi\USBWebserver v8.5\8.5/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.5.20'  socket: ''  port: 3307  MySQL Community Server (GPL)
+120829 14:28:35 [Note] Plugin 'FEDERATED' is disabled.
+120829 14:28:35 InnoDB: The InnoDB memory heap is disabled
+120829 14:28:35 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+120829 14:28:35 InnoDB: Compressed tables use zlib 1.2.3
+120829 14:28:35 InnoDB: Initializing buffer pool, size = 128.0M
+120829 14:28:35 InnoDB: Completed initialization of buffer pool
+120829 14:28:35 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120829 14:28:35  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120829 14:28:35  InnoDB: Waiting for the background threads to start
+120829 14:28:36 InnoDB: 1.1.8 started; log sequence number 1595675
+120829 14:28:36 [Note] Event Scheduler: Loaded 0 events
+120829 14:28:36 [Note] D:\Syncs\Dropbox\Development\HiFi\USBWebserver v8.5\8.5/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.5.20'  socket: ''  port: 3307  MySQL Community Server (GPL)
+120829 14:30:47 [Note] Plugin 'FEDERATED' is disabled.
+120829 14:30:47 InnoDB: The InnoDB memory heap is disabled
+120829 14:30:47 InnoDB: Mutexes and rw_locks use Windows interlocked functions
+120829 14:30:47 InnoDB: Compressed tables use zlib 1.2.3
+120829 14:30:48 InnoDB: Initializing buffer pool, size = 128.0M
+120829 14:30:48 InnoDB: Completed initialization of buffer pool
+120829 14:30:48 InnoDB: highest supported file format is Barracuda.
+InnoDB: The log sequence number in ibdata files does not match
+InnoDB: the log sequence number in the ib_logfiles!
+120829 14:30:48  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+120829 14:30:48  InnoDB: Waiting for the background threads to start
+120829 14:30:49 InnoDB: 1.1.8 started; log sequence number 1595675
+120829 14:30:49 [Note] Event Scheduler: Loaded 0 events
+120829 14:30:49 [Note] D:\Syncs\Dropbox\Development\HiFi\USBWebserver v8.5\8.5/mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.5.20'  socket: ''  port: 3307  MySQL Community Server (GPL)
