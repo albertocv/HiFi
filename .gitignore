@@ -1,4 +1,6 @@
-logs/
+logs/*
 my.ini
 php.ini
+httpd.conf
+
 
