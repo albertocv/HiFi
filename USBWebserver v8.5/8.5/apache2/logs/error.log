@@ -1,8 +1,8 @@
-[Thu Aug 30 13:39:00 2012] [notice] Apache/2.2.21 (Win32) PHP/5.3.9 configured -- resuming normal operations
-[Thu Aug 30 13:39:00 2012] [notice] Server built: Sep 10 2011 11:34:11
-[Thu Aug 30 13:39:00 2012] [notice] Parent: Created child process 3248
-[Thu Aug 30 13:39:01 2012] [notice] Child 3248: Child process is running
-[Thu Aug 30 13:39:01 2012] [notice] Child 3248: Acquired the start mutex.
-[Thu Aug 30 13:39:01 2012] [notice] Child 3248: Starting 64 worker threads.
-[Thu Aug 30 13:39:01 2012] [notice] Child 3248: Starting thread to listen on port 8080.
-[Thu Aug 30 13:39:01 2012] [notice] Child 3248: Starting thread to listen on port 8080.
+[Thu Aug 30 14:24:37 2012] [notice] Apache/2.2.21 (Win32) PHP/5.3.9 configured -- resuming normal operations
+[Thu Aug 30 14:24:37 2012] [notice] Server built: Sep 10 2011 11:34:11
+[Thu Aug 30 14:24:37 2012] [notice] Parent: Created child process 5460
+[Thu Aug 30 14:24:37 2012] [notice] Child 5460: Child process is running
+[Thu Aug 30 14:24:37 2012] [notice] Child 5460: Acquired the start mutex.
+[Thu Aug 30 14:24:37 2012] [notice] Child 5460: Starting 64 worker threads.
+[Thu Aug 30 14:24:37 2012] [notice] Child 5460: Starting thread to listen on port 8080.
+[Thu Aug 30 14:24:37 2012] [notice] Child 5460: Starting thread to listen on port 8080.
