@@ -1,0 +1,93 @@
+02:50:20 ********************************************************* 
+02:50:20 PACKAGE-LOG:  
+02:50:20 ********************************************************* 
+02:50:20 duplicator: 0.3.1 
+02:50:20 wordpress: 3.3.2 
+02:50:20 php: 5.3.9 
+02:50:20 php sapi: apache2handler 
+02:50:20 server: Apache/2.2.21 (Win32) PHP/5.3.9 
+02:50:20 browser: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.14 Safari/537.4 
+02:50:20 package name: 20120830_hifidate 
+02:50:20 max_time: from=30 to=1000 
+02:50:20 max_memory: from=256M to=512M 
+02:50:20 mysql wait_timeout: 1000 
+02:50:20 ********************************************************* 
+02:50:20 SQL SCRIPT 
+02:50:20 ********************************************************* 
+02:50:20 log:fun__create_dbscript=>started 
+02:50:20 log:fun__create_dbscript=>dbiconv enabled 
+02:50:20 log:fun__create_dbscript=>creating table: wp_cfs_fields 
+02:50:20 log:fun__create_dbscript=>rows found: 0 
+02:50:20 log:fun__create_dbscript=>table processed: wp_cfs_fields 
+02:50:20 log:fun__create_dbscript=>creating table: wp_cfs_values 
+02:50:20 log:fun__create_dbscript=>rows found: 0 
+02:50:20 log:fun__create_dbscript=>table processed: wp_cfs_values 
+02:50:20 log:fun__create_dbscript=>creating table: wp_commentmeta 
+02:50:20 log:fun__create_dbscript=>rows found: 0 
+02:50:20 log:fun__create_dbscript=>table processed: wp_commentmeta 
+02:50:20 log:fun__create_dbscript=>creating table: wp_comments 
+02:50:20 log:fun__create_dbscript=>rows found: 15 
+02:50:20 log:fun__create_dbscript=>table processed: wp_comments 
+02:50:20 log:fun__create_dbscript=>creating table: wp_duplicator 
+02:50:20 log:fun__create_dbscript=>rows found: 0 
+02:50:20 log:fun__create_dbscript=>table processed: wp_duplicator 
+02:50:20 log:fun__create_dbscript=>creating table: wp_links 
+02:50:20 log:fun__create_dbscript=>rows found: 13 
+02:50:20 log:fun__create_dbscript=>table processed: wp_links 
+02:50:20 log:fun__create_dbscript=>creating table: wp_options 
+02:50:20 log:fun__create_dbscript=>rows found: 5 
+02:50:20 log:fun__create_dbscript=>table processed: wp_options 
+02:50:20 log:fun__create_dbscript=>creating table: wp_postmeta 
+02:50:20 log:fun__create_dbscript=>rows found: 4 
+02:50:20 log:fun__create_dbscript=>table processed: wp_postmeta 
+02:50:20 log:fun__create_dbscript=>creating table: wp_posts 
+02:50:20 log:fun__create_dbscript=>rows found: 23 
+02:50:20 log:fun__create_dbscript=>table processed: wp_posts 
+02:50:20 log:fun__create_dbscript=>creating table: wp_term_relationships 
+02:50:20 log:fun__create_dbscript=>rows found: 3 
+02:50:20 log:fun__create_dbscript=>table processed: wp_term_relationships 
+02:50:20 log:fun__create_dbscript=>creating table: wp_term_taxonomy 
+02:50:20 log:fun__create_dbscript=>rows found: 6 
+02:50:20 log:fun__create_dbscript=>table processed: wp_term_taxonomy 
+02:50:20 log:fun__create_dbscript=>creating table: wp_terms 
+02:50:20 log:fun__create_dbscript=>rows found: 4 
+02:50:20 log:fun__create_dbscript=>table processed: wp_terms 
+02:50:20 log:fun__create_dbscript=>creating table: wp_usermeta 
+02:50:20 log:fun__create_dbscript=>rows found: 4 
+02:50:20 log:fun__create_dbscript=>table processed: wp_usermeta 
+02:50:20 log:fun__create_dbscript=>creating table: wp_users 
+02:50:20 log:fun__create_dbscript=>rows found: 10 
+02:50:20 log:fun__create_dbscript=>table processed: wp_users 
+02:50:20 log:fun__create_dbscript=>sql file written to D:/Syncs/Dropbox/Development/HiFi/USBWebserver v8.5/8.5/root/wp-snapshots/503f7dac897051553_20120830_hifidate_database.sql 
+02:50:20 log:fun__create_dbscript=>ended 
+02:50:20 ********************************************************* 
+02:50:20 ZIP ARCHIVE 
+02:50:20 ********************************************************* 
+02:50:20 log:class.zip=>started 
+02:50:20 log:class.zip=>archive file:   D:/Syncs/Dropbox/Development/HiFi/USBWebserver v8.5/8.5/root/wp-snapshots/503f7dac897051553_20120830_hifidate_package.zip 
+02:50:20 log:class.zip=>archive folder: D:/Syncs/Dropbox/Development/HiFi/USBWebserver v8.5/8.5/root/ 
+02:50:20 log:class.zip=>skip extensions: 
+02:50:20 log:class.zip=>opened 
+02:50:22 log:class.zip=>archive info: ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 1632
+    [filename] => D:\Syncs\Dropbox\Development\HiFi\USBWebserver v8.5\8.5\root\wp-snapshots\503f7dac897051553_20120830_hifidate_package.zip
+    [comment] => 
+)
+ 
+02:50:29 log:class.zip=>close returned: 1 (if null check your disk quota) 
+02:50:29 log:class.zip=>ended 
+02:50:29 log:act__create=>zip file size is: 7.85MB 
+02:50:29 log:act__create=>zip archive complete. 
+02:50:29 log:act__create=>recorded archieve id: 1 
+02:50:29 ********************************************************* 
+02:50:29 UPDATE INSTALLER FILE 
+02:50:29 ********************************************************* 
+02:50:29 log:fun__create_installerFile=>started 
+02:50:29 log:fun__create_installerFile=>installer.php updated at: D:/Syncs/Dropbox/Development/HiFi/USBWebserver v8.5/8.5/root/wp-snapshots/503f7dac897051553_20120830_hifidate_installer.php 
+02:50:29 log:fun__create_installerFile=>ended 
+02:50:29 ********************************************************* 
+02:50:29 DONE PROCESSING => 20120830_hifidate 
+02:50:29 ********************************************************* 

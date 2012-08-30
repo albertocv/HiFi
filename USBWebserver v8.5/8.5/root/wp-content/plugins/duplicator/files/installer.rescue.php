@@ -105,9 +105,9 @@ END ADVANCED FEATURES: Do not edit below here.
 
 //GLOBALS
 $GLOBALS['DUPLICATOR_INSTALLER_VERSION'] =  '0.3.1';
-$GLOBALS["SERIAL_TABLES"]["wpplug_options"]  = array('column_id' => 'option_id',  'column_value' => 'option_value');
-$GLOBALS["SERIAL_TABLES"]["wpplug_postmeta"] = array('column_id' => 'meta_id',    'column_value' => 'meta_value');													 
-$GLOBALS["SERIAL_TABLES"]["wpplug_usermeta"] = array('column_id' => 'umeta_id',    'column_value' => 'meta_value');
+$GLOBALS["SERIAL_TABLES"]["wp_options"]  = array('column_id' => 'option_id',  'column_value' => 'option_value');
+$GLOBALS["SERIAL_TABLES"]["wp_postmeta"] = array('column_id' => 'meta_id',    'column_value' => 'meta_value');													 
+$GLOBALS["SERIAL_TABLES"]["wp_usermeta"] = array('column_id' => 'umeta_id',    'column_value' => 'meta_value');
 
 $GLOBALS["SQL_FILE_NAME"] 	= "installer-data.sql";
 $GLOBALS["LOG_FILE_NAME"] 	= "installer-log.txt";
@@ -552,7 +552,7 @@ if ($action == 'dbconnect-test') {
 		dinstaller_log("server: {$_SERVER['SERVER_SOFTWARE']}");
 		dinstaller_log("document root: {$GLOBALS['CURRENT_ROOT_PATH']}");
 		dinstaller_log("document root 755: {$root_path_chown}");
-		dinstaller_log("secure build name: 501f2d2a1c37b9595_package");
+		dinstaller_log("secure build name: 503f7dac897051553_20120830_hifidate");
 		dinstaller_log("----------------------------------");
 		dinstaller_log("SETTINGS:");
 		dinstaller_log("database connection => host:{$dbhost} | database:{$dbname} ");
@@ -590,8 +590,8 @@ if ($action == 'dbconnect-test') {
 		if($filename == null) {
 			die(MSG_ERR_ZIPNOTFOUND  . $tryagain_html);
 		}
-		if ('501f2d2a1c37b9595_package_package.zip' != $zip_name) {
-			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   501f2d2a1c37b9595_package_package.zip  \nprocessed with: {$zip_name}  \n");
+		if ('503f7dac897051553_20120830_hifidate_package.zip' != $zip_name) {
+			dinstaller_log("WARNING: This Package Set may be incompatible!  \nBelow is a summary of the package this installer was built with and the package used. To guarantee accuracy make sure the installer and package match. For more details see the online FAQs.  \ncreated with:   503f7dac897051553_20120830_hifidate_package.zip  \nprocessed with: {$zip_name}  \n");
 			$package_set_warning = true;
 		}
 		
@@ -750,19 +750,19 @@ if ($action == 'dbconnect-test') {
 		
 		if ($table_count == 0) {
 			dinstaller_log("NOTICE: You may have to manually run the installer-data.sql to validate data input. Also check to make sure your installer file is correct and the
-			table prefix 'wpplug_' is correct for this particular version of WordPress. \n");
+			table prefix 'wp_' is correct for this particular version of WordPress. \n");
 		}
 		
 		//Update site title
 		$site_title = mysqli_real_escape_string($mysqli_conn, $_POST['site_title']);
-		mysqli_query($mysqli_conn, "UPDATE `wpplug_options` SET option_value = '{$site_title}' WHERE option_name = 'blogname' ");
+		mysqli_query($mysqli_conn, "UPDATE `wp_options` SET option_value = '{$site_title}' WHERE option_name = 'blogname' ");
 		
 		
 		//DATA CLEANUP: Perform Transient Cache Cleanup
 		//Remove all duplicator entries and record this one since this is a new install.
-		mysqli_query($mysqli_conn, "DELETE FROM `wpplug_duplicator`");
-		mysqli_query($mysqli_conn, "DELETE FROM `wpplug_options` WHERE `option_name` LIKE ('_transient%')");
-		mysqli_query($mysqli_conn, "DELETE FROM `wpplug_options` WHERE `option_name` LIKE ('_site_transient%')");
+		mysqli_query($mysqli_conn, "DELETE FROM `wp_duplicator`");
+		mysqli_query($mysqli_conn, "DELETE FROM `wp_options` WHERE `option_name` LIKE ('_transient%')");
+		mysqli_query($mysqli_conn, "DELETE FROM `wp_options` WHERE `option_name` LIKE ('_site_transient%')");
 		dinstaller_log("\nTransient cached cleanup completed.\n");
 		
 		
@@ -853,7 +853,7 @@ if ($action == 'dbconnect-test') {
 		
 		@unlink('database.sql');
 		
-		$currdata = parse_url(""); 
+		$currdata = parse_url("http://localhost:8080"); 
 		$newdata  = parse_url($new_url);
 		$currpath = dinstaller_add_slash(isset($currdata['path']) ? $currdata['path'] : "");
 		$newpath  = dinstaller_add_slash(isset($newdata['path'])  ? $newdata['path']  : "");
@@ -966,7 +966,7 @@ HTACCESS;
 				<tr valign="top">
 					<td style="width:130px">Package Url</td>
 					<td>
-						<input type="text" name="current_url" id="current_url" value="" readonly="true"  class="readonly" />
+						<input type="text" name="current_url" id="current_url" value="http://localhost:8080" readonly="true"  class="readonly" />
 						<a href="javascript:editNewURL()" id="edit_current_url" style="font-size:12px">edit</a>
 					
 					</td>
@@ -977,7 +977,7 @@ HTACCESS;
 				</tr>
 				<tr>
 					<td>Site Title</td>
-					<td><input type="text" name="site_title" id="site_title" value="Duplicator Plugin" /></td>
+					<td><input type="text" name="site_title" id="site_title" value="HiFiDaTe" /></td>
 				</tr>
 			</table><br/>
 			
